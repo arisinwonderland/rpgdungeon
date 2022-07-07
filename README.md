@@ -23,4 +23,4 @@ RPG Dungeon's rules are available to the public, but unit details and the actual
 ## Can I help?
 Probably not, but if you're interested in trying anyway, shoot me an email at yue206@gmail.com.
 
-*RPG Dungeon &copy; 2019-2022 RPG Dungeon Team. RPG Dungeon is a fan-based parody work and is unaffiliated with the rightsholders of any characters mentioned or featured. Please support the official release.*
+*RPG Dungeon &copy; 2019-2022 RPG Dungeon Team. RPG Dungeon is a fan-based parody work and is unaffiliated with the rightsholders of any characters mentioned or featured.*
