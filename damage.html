@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>RPG Dungeon - Dealing Damage</title>
+  <!-- Favicon is a private art commission by https://twitter.com/Luucky_NANA -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+    $(function() {
+      $("#sidebar").load("shared/sidebar.html");
+      $("#footer").load("shared/footer.html");
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1><a href="index.html">RPG Dungeon Starter Guide</a></h1>
+    </header>
+
+    <div id="sidebar">
+      <nav>
+        <ul>
+          <li>
+            Basics
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </li>
+          <li>
+            World
+            <ul>
+              <li><a href="overview.html">Overview</a></li>
+              <li><a href="setting.html">Setting</a></li>
+              <li><a href="locales.html">Locales</a></li>
+            </ul>
+          </li>
+          <li>
+            Gameplay
+            <ul>
+              <li><a href="character.html">Character</a></li>
+              <li><a href="stats.html">Stats</a></li>
+              <li><a href="combat.html">Combat</a></li>
+              <li><a href="damage.html">Damage</a></li>
+              <li><a href="simulator.html">Simulator</a></li>
+            </ul>
+          </li>
+          <li>
+            Team
+            <ul>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="main">      
+      <h2>Dealing Damage</h2>
+      <p class="subtitle">That's a lot of damage!</p>
+      <p>This is the formula we use to calculate damage here.</p>
+      <!-- Image is original and shares copyright with the rest of the webpage. -->
+      <img src="img/damage1.png" title="No, you're not supposed to get it. Yet.">
+      <p>The grossly oversimplified version of that is "attack (a) times multiplier (m) minus defense (d)". Every attack has a multiplier, which is set to 100% (1x) if not specified. There's two normal ways to attack: physical and non-physical. PD is generally subtracted from PA-based damage, and NPD is generally subtracted from NPA-based damage. Specific attacks may deviate from this, but unless an ability or item states otherwise you can safely assume this is how it'll work. There's also a much rarer third type of damage, "true damage". True damage ignores defenses entirely. Use this sparingly or not at all.</p>
+      <p>The other main factor in damage dealt is attack range. Attacking abilities are assigned ranges that affect the final damage dealt by an attack. Both players and enemies can be at one of three ranges at any given time: close, medium/mid, or long. It costs 25 AP to change ranges by default. Depending on the range of an ability and the range an attacker is positioned in, a damage multiplier (r) is applied to the attack. Here's a crude visualization:</p>
+      <!-- Image is original and shares copyright with the rest of the webpage. -->
+      <img src="img/range.png" title="Also known as the 'tennis court system'.">
+      <p>Neither players nor enemies can enter the other half of the field unless an ability allows it. Unless specified otherwise in the text of an attack, only the attacker's range matters. This means that if you have a close-range attack, you just need to be in player close range to deal full damage. </p>
+      <p>Basic attacks ignore range by default, but you'll need to list a range for all your attacking abilities. Here are your default options for ranges. The number in each cell is the damage multiplier for a given combination of attack range and player range. If you're confused, feel free to ask a mod.</p>
+      <table>
+        <tr>
+          <td></td>
+          <th>Attacker in close range</th>
+          <th>Attacker in mid range</th>
+          <th>Attacker in long range</th>
+        </tr>
+        <tr>
+          <th>Close-range attack</th>
+          <td>100%</td>
+          <td>80%</td>
+          <td>0%</td>
+        </tr>
+        <tr>
+          <th>Mid-range attack</th>
+          <td>75%</td>
+          <td>100%</td>
+          <td>50%</td>
+        </tr>
+        <tr>
+          <th>Long-range attack</th>
+          <td>50%</td>
+          <td>80%</td>
+          <td>100%</td>
+        </tr>
+        <tr>
+          <th>Any-range attack</th>
+          <td colspan=3>100%</td>
+        </tr>
+      </table>
+      <p>Lastly, any attack has a chance to land a critical hit unless otherwise specified, multiplying the damage by a number (c). The multiplier is 2 by default. The base chance of a <abbr title="critical hit">crit</abbr> is SPD/5%.</p>
+      <p>Put all together, that damage formula from earlier now looks like this:</p>
+      <img src="img/damage2.png" title="Yes, you're supposed to get it.">
+      <p>Not so bad, right?</p>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+</body>
+</html>

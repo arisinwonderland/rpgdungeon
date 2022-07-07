@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>RPG Dungeon - Locales</title>
+  <!-- Favicon is a private art commission by https://twitter.com/Luucky_NANA -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+    $(function() {
+      $("#sidebar").load("shared/sidebar.html");
+      $("#footer").load("shared/footer.html");
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1><a href="index.html">RPG Dungeon Starter Guide</a></h1>
+    </header>
+
+    <div id="sidebar"></div>
+
+    <div id="main">      
+      <h2>Locale Info</h2>
+      <p class="subtitle"><i>Go forth and multi-die.</i></p>
+      <p>Here is a list of the potential locations you can send your characters in.</p>
+      <ul>
+        <li><b>Grasslands:</b> No special qualities.</li>
+        <li><b>Dark Tower:</b> Stats of all player characters and summons with Shadow attacks or resistances are multiplied by 1.1. When at Floor 5 or above, player characters must perform 10% Desperation checks at the beginning of every battle. Desperation lasts one turn.</li>
+        <li><b>Desert:</b> During the day, 10% chance to Burn player characters and summons at the start of combat, unless they are resistant to either Fire or Burn. During the night, 10% chance to Freeze player characters and summons at the start of combat, unless they are resistant to either Ice or Freeze.</li>
+        <li><b>Underground:</b> Cannot enter this locale normally. 3% chance to drop into this locale after any battle in most locales.</li>
+        <li><b>The Void:</b> Every action has a 1% chance to not take effect.</li>
+      </ul>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+</body>
+</html>

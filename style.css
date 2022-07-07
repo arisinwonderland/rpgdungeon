@@ -1,0 +1,139 @@
+body {
+      font-family: Arial;
+      background-color: #8b806d;
+}
+
+header {
+      padding-left: 30px;
+      height: 80px;
+      background-color: #005855;
+      background-repeat: no-repeat;
+      background-position: right; 
+      color: white;
+}
+
+h1 {
+      display: inline-block;
+      vertical-align: center;
+}
+
+h2 {
+      color: #95989d;
+      font-family: arial;
+}
+
+h3 {
+      margin-bottom: 5px;
+}
+
+footer {
+      font-size: 70%;
+      font-style: italic;
+      text-align: center;
+      clear: right;
+      color: #95989d;
+      padding-bottom: 20px;
+      height: 20px;
+}
+
+a {
+      color: #009181;
+      text-decoration: none;
+}
+
+h1 a, nav a {
+      color: inherit; !important
+}
+
+nav {
+      margin-bottom: -10px;
+}
+
+nav ul {
+      font-size: 10px;
+      padding-left: 3em;
+      padding-bottom: 10px;
+      margin-top: 2px;
+      list-style: none;
+      text-transform: uppercase;
+}
+
+nav ul ul {
+      font-size: 14px;
+      padding-left: 1.5em;
+      list-style-type: '#';
+      text-transform: lowercase;
+}
+
+nav li li {
+      padding-left: .5em;
+}
+
+table {
+      border-collapse: collapse;
+      margin: auto;
+      text-align: center;
+}
+
+th, td {
+      border: 1px solid white;
+      padding: 5px 25px 5px 25px;   
+}
+
+img {
+      max-width:100%;
+}
+
+.subtitle {
+      font-weight: bold;
+      font-style: italic;
+}
+
+.character p {
+      margin-bottom: 0;
+}
+
+.character ul {
+      margin-top: 5px;
+      padding-left: 2em;
+      list-style-type: '- ';
+
+}
+
+.avatar {
+      margin-top: 10px;
+      width: 200px;
+}
+
+#wrapper {
+      background-color: #36393e;
+      box-shadow: 3px 3px 3px #000033;
+      width: 70%;
+      margin: auto;
+      max-width: 1200px;
+      position: relative;
+
+}
+
+#sidebar {
+      position: absolute;
+      float: left;
+      overflow-x: hidden;
+      width: 160px;
+      top: 80px;
+      bottom: 0px;
+      padding-top: 20px;
+      background-color: #2e3136;
+      font-weight: bold;
+      color: #95989d;
+      z-index: 1; /* Stay on top */      
+}
+
+#main {
+      position: relative;
+      display: float;
+      margin-left: 160px;
+      min-height: 300px;
+      padding: 5px 30px 25px 30px;
+      color: #dcddde;
+}

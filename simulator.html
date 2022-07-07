@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>RPG Dungeon - Combat Simulator</title>
+  <!-- Favicon is a private art commission by https://twitter.com/Luucky_NANA -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+    $(function() {
+      $("#sidebar").load("shared/sidebar.html");
+      $("#footer").load("shared/footer.html");
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1><a href="index.html">RPG Dungeon Starter Guide</a></h1>
+    </header>
+
+    <div id="sidebar"></div>
+
+    <div id="main">      
+      <h2>Combat Simulator</h2>
+      <p class="subtitle">"My OC can beat up your OC!"</p>
+      <p>Because of the player-driven nature of RPG Dungeon, it's hard to fully automate combat (unfortunately). However, you can still get a pretty decent approximation, and that's what this page is for! Just fill in the necessary values and the page will tell you how much damage your simulated attack will do.</p>
+      <form action="" id="calcform" onsubmit="return false;">
+        <label for="atk">Attacking stat: </label><input type="number" name="atk" min="0" max="999" value="100" required><br>
+        <label for="def">Defending stat: </label><input type="number" name="def" min="0" max="999" value="50" required><br>
+        <label for="mult">Attack multiplier: </label><input type="number" name="mult" value="1" required><br>
+        <label for="crit">Critical damage multiplier: </label><input type="number" name="crit" value="2" required><br><br>
+        <label for="pos">Attacker position: </label>
+        <select name="pos">
+          <option value="0">Close range</option>
+          <option value="1">Mid range</option>
+          <option value="2">Long range</option>
+        </select><br>
+        <label for="rng">Attack effective range:</label>
+        <select name="rng">
+          <option value="0">Close range</option>
+          <option value="1">Mid range</option>
+          <option value="2">Long range</option>
+          <option value="3">Any range</option>
+        </select><br><br>
+        <label for="critbox">Critical hit?: </label>
+        <input type="checkbox" name="critbox"><br>
+        <label for="truebox">True damage?: </label>
+        <input type="checkbox" name="truebox"><br><br>
+        <input type="submit" value="Calculate!"><input type="reset" value="Reset">
+      </form>      
+    </div>
+
+    <footer>
+      Copyright &copy; 2022 RPG Dungeon Team<br>
+      <a href="mailto:a30115102@mcla.edu">rpg@dungeon.com</a>
+    </footer>
+  </div>
+
+  <script>
+    // first dimension is attacker pos, second is atk range
+    let efficiency = [
+      [1.0, 0.75, 0.5, 1.0],
+      [0.8, 1.0, 0.5, 1.0],
+      [0, 0.5, 1.0, 1.0],
+    ];
+
+    var form = document.forms["calcform"];
+    calcform.addEventListener("submit", calc, false);
+    function calc(){
+      var atk = form.elements["atk"].value;
+      var def = form.elements["def"].value;
+      var mult = form.elements["mult"].value;
+      var crit = form.elements["crit"].value;
+
+      var pos = form.elements["pos"].value;
+      var rng = form.elements["rng"].value;
+      var eff = efficiency[pos][rng];
+
+      var truetext = "";
+      var crittext = "";
+      var punc = ".";
+
+      if (form.elements["truebox"].checked) {
+        def = 0;
+        truetext = " true";
+      }
+
+      var dmg = (atk * mult - def) * eff;
+
+      if (form.elements["critbox"].checked) {
+        dmg = dmg * crit; 
+        crittext = " on a critical hit";
+      }
+
+      if (dmg > 0) {
+        punc = "!";
+      }
+      if (dmg < 0) {
+        dmg = 0;
+      }
+
+      var output = `The attack deals ${dmg}${truetext} damage${crittext}${punc}`
+
+      alert(output);
+    }
+  </script>
+</body>
+</html>

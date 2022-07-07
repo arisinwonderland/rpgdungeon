@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>RPG Dungeon - Stats</title>
+  <!-- Favicon is a private art commission by https://twitter.com/Luucky_NANA -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+    $(function() {
+      $("#sidebar").load("shared/sidebar.html");
+      $("#footer").load("shared/footer.html");
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1><a href="index.html">RPG Dungeon Starter Guide</a></h1>
+    </header>
+
+    <div id="sidebar">
+      <nav>
+        <ul>
+          <li>
+            Basics
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </li>
+          <li>
+            World
+            <ul>
+              <li><a href="overview.html">Overview</a></li>
+              <li><a href="setting.html">Setting</a></li>
+              <li><a href="locales.html">Locales</a></li>
+            </ul>
+          </li>
+          <li>
+            Gameplay
+            <ul>
+              <li><a href="character.html">Character</a></li>
+              <li><a href="stats.html">Stats</a></li>
+              <li><a href="combat.html">Combat</a></li>
+              <li><a href="damage.html">Damage</a></li>
+              <li><a href="simulator.html">Simulator</a></li>
+            </ul>
+          </li>
+          <li>
+            Team
+            <ul>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="main">      
+      <h2>Stats</h2>
+      <p class="subtitle">The numbers, Mason. What do they mean?</p>
+      <p>The first thing on the character sheet above (after the character name and the player's username, of course) is the <abbr title="statistic">stat</abbr> spread. Here's the rundown. Hover any of the abbreviations to see the full term.</p>
+      <ul>
+        <li><abbr title="Hit Points">HP</abbr>: If this shit goes down to 0 then you're dead, son. And if you're dead, you become a spectator until you get revived.</li>
+        <li><abbr title="Physical Attack">PA</abbr>: Your ability to damage someone's HP via physical means.</li>
+        <li><abbr title="Non-Physical Attack">NPA</abbr>: Your ability to damage someone's HP via non-physical means.</li>
+        <li><abbr title="Physical Defense">PD</abbr>: Your ability to reduce the damage of physical attacks.</li>
+        <li><abbr title="Non-Physical Defense">NPD</abbr>: Your ability to reduce the damage of non-physical attacks.</li>
+        <li><abbr title="Speed">SPD</abbr>: Unit with the highest speed moves first. 20% of a unit's speed determines that unit's critical rate.</li>
+        <li><abbr title="Carrying Capacity">CC</abbr>: How much stuff you can hold. CC is a pretty abstract quantity, but a weapon weighs about 1-3 CC and a human body weighs about 10.</li>
+      </ul>
+      <p>The average human being with no powers or equipment will have about 50 in every stat besides NPA, which will probably be 0. Most characters in RPG Dungeon are not average human beings. You're welcome to make an average human being, of course, but just note that they'll probably be a bit underpowered compared to a lot of the other units here.</p>
+      <p>Also keep in mind that the stats as listed in the above format are just base stats. If your character has an item or something similar that changes their stats, you'll want to write the bonus in parentheses. For example, if <a href="https://en.wikipedia.org/wiki/Fire_Emblem_Awakening">Lucina</a> has 60 base PA and has a sword equipped that boosts it by 10, it'll get formatted like this:</p>
+      <p>PA: 60 (+10)</p>
+      <p>Negative stat modifiers also appear on equipment sometimes. You'll format that much the same way.</p> 
+      <p>Note that stat modifiers that only take effect in battle shouldn't be listed here; for example, if you have a ring that gives you +20 PA/NPA on turn 6 or a passive that gives you +30 SPD from the start of the battle until you attack, you wouldn't list that in your character sheet. That'll be tracked in #rpg-notes instead once you enter an actual battle.</p>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>RPG Dungeon - Character Creation</title>
+  <!-- Favicon is a private art commission by https://twitter.com/Luucky_NANA -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+    $(function() {
+      $("#sidebar").load("shared/sidebar.html");
+      $("#footer").load("shared/footer.html");
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1><a href="index.html">RPG Dungeon Starter Guide</a></h1>
+    </header>
+
+    <div id="sidebar"></div>
+
+    <div id="main">      
+      <h2>Character Creation</h2>
+      <p class="subtitle">Step 1: pick a character. Step 2: build the rest of the fucking character.</p>
+      <p>If you're considering making a character, you'll probably want to ask Zak or Grey for a personal Dungeon channel. You don't need to actually use it, since we've long since stopped caring about having too many channels here. Alternatively, if you're afraid of commitment, you can just do it in <abbr title="direct messages">DMs</abbr>. Once you've chosen your preferred avenue of communication, feel free to ask us any questions you like. Once you're done, submit your final draft so we can check it over for balance and suggest any changes. We'll tell you when you're okay to post it to #rpg-conversion. You can change your characters at any time after submission by contacting one of us or pinging us in your channel. </p>
+      <p>For ease of illustration, here's a generic character who isn't actually in the dungeon. Reference if you want to see how the information in the below sections translates to text, or if you want a base to start from when you build your own. Come back here anytime if you need to take another look at the full picture.</p>
+      <div class="character">
+        <p>
+          <b><a href="https://en.wikipedia.org/wiki/Link_(The_Legend_of_Zelda)">Link</a></b><br>
+          <i>HDXylophone</i><br>
+        </p>
+        <p>
+          HP: 50<br>
+          PA: 80<br>
+          NPA: 40<br>
+          PD: 50<br>
+          NPD: 40<br>
+          SPD: 80<br>
+          CC: 20
+        </p>
+        <p>
+          <i>Passive Abilities</i><br>
+          <ul>
+            <li>Power of the Master Sword - When this unit performs a basic attack while having full health, their basic attacks will also do an additional half damage attack of Spirit element.</li>
+            <li>Champion's Power - When this unit performs a critical hit, there is a 25% chance to send the target back one range. If the target is in long-range, stun them and move them to close range.</li>
+            <li>Hylian Shield - This unit has a 50% chance to negate damage from mid or long-range enemies.</li>
+          </ul>
+        </p>
+        <p>
+          <i>Active Abilities</i><br>
+          <ul>
+            <li>Gale Boomerang - Mid-range 50% PA that hits twice.</li>
+            <li>Bomb - Mid-range 150% NPA that damages all enemies in the range.</li>
+            <li>Sword Slash - Close-range PA that hits twice.</li>
+            <li>Health Potion - Restore 20 HP.</li>
+          </ul>
+        </p>
+        <p>
+          <i>Ultimate Abilities</i><br>
+          <ul>
+            <li>Triforce of Courage - Can only be used when at 100% HP. Mid-range 250% PA that targets one enemy.</li>
+            <li>Champion's Blessing - Cooldown: 5 turns. +20 to all stats for 3 turns.</li>
+          </ul>
+        </p>
+        <p>
+          <i>Equipment</i><br>
+          <ul>
+            <li>Master Sword - 3 weight. While equipped, deals 20% more damage to evil enemies.</li>
+            <li>Hero's Tunic - 2 weight. Reduces damage received from evil enemies by 20%.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+</body>
+</html>

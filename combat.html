@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>RPG Dungeon - Combat</title>
+  <!-- Favicon is a private art commission by https://twitter.com/Luucky_NANA -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+    $(function() {
+      $("#sidebar").load("shared/sidebar.html");
+      $("#footer").load("shared/footer.html");
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1><a href="index.html">RPG Dungeon Starter Guide</a></h1>
+    </header>
+
+    <div id="sidebar">
+      <nav>
+        <ul>
+          <li>
+            Basics
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </li>
+          <li>
+            World
+            <ul>
+              <li><a href="overview.html">Overview</a></li>
+              <li><a href="setting.html">Setting</a></li>
+              <li><a href="locales.html">Locales</a></li>
+            </ul>
+          </li>
+          <li>
+            Gameplay
+            <ul>
+              <li><a href="character.html">Character</a></li>
+              <li><a href="stats.html">Stats</a></li>
+              <li><a href="combat.html">Combat</a></li>
+              <li><a href="damage.html">Damage</a></li>
+              <li><a href="simulator.html">Simulator</a></li>
+            </ul>
+          </li>
+          <li>
+            Team
+            <ul>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="main">      
+      <h2>The Combat System</h2>
+      <p class="subtitle">The art of smacking your action figures against each other.</p>
+      <p>To reiterate from the <a href="stats.html">Stats</a> page, turn order is determined by speed; ties are broken randomly. On each player character's turn (that's you), you get 100 <abbr title="Action Points">AP</abbr> to do whatever you like with. Here's a list of actions you can take. Keep in mind that the listed AP costs are only defaults. Specific abilities or items may cost more or less.</p>
+      <ul>
+        <li>Repositioning: 25 AP. More on this on the <a href="damage.html">Dealing Damage</a> page.</li>
+        <li>Using/managing items: 25 AP</li>
+        <li>Using Active Abilities: 50 AP</li>
+        <li>Using Ultimate Abilities: 100 AP. Cannot be used until Turn 6 unless your character is granted a free Ultimate. </li>
+      </ul>
+      <p>Once you've consumed all your AP, or at any other point during your turn, you can decide to end your turn in one of two ways:</p>
+      <ul>
+        <li>Attack: Perform a basic PA or NPA on an enemy of your choice and then end turn.</li>
+        <li>End Turn: End turn without attacking. Some abilities or items may only activate when taking this option.</li>
+      </ul>
+      <p>Enemies don't (usually) get AP. Instead, they get one action per turn by default. For anything that's not a boss, that action is selected randomly from among their active abilities. They may also perform basic PAs or NPAs. Bosses get special treatment, and their actions are hand-picked by the DM.</p>
+      <p>Whenever your character's outside the lobby, you'll track their current health total, stats, and any other pertinent information (status changes, cooldowns, etc.) in #rpg-notes, following the same format the other posts use. While we're sometimes willing to retcon stuff if you forgot something, please do try to keep it up to date for the sake of clarity.</p>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+</body>
+</html>
